@@ -1,0 +1,67 @@
+﻿<Properties StartupConfiguration="{85F1A832-2A52-4972-AC7A-1FF91290BA8F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EshopApp/Views/App/Contact.cshtml">
+    <Files>
+      <File FileName="EshopApp/Controllers/AppController.cs" Line="37" Column="10" />
+      <File FileName="EshopApp/Views/_ViewImports.cshtml" />
+      <File FileName="EshopApp/package.json" />
+      <File FileName="EshopApp/Views/Shared/_Layout.cshtml" />
+      <File FileName="EshopApp/wwwroot/css/site.css" />
+      <File FileName="EshopApp/Views/App/Contact.cshtml" Line="4" Column="1" />
+      <File FileName="EshopApp/Views/_ViewStart.cshtml" />
+      <File FileName="EshopApp/Views/App/Index.cshtml" />
+      <File FileName="EshopApp/Views/App/Shop.cshtml" Line="8" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="EshopApp" expanded="True">
+            <Node name="EshopApp" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="Migrations" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="node_modules" expanded="True">
+                <Node name="bootstrap" expanded="True">
+                  <Node name="dist" expanded="True">
+                    <Node name="js" expanded="True">
+                      <Node name="bootstrap.js" expanded="True" />
+                    </Node>
+                  </Node>
+                  <Node name="js" expanded="True">
+                    <Node name="dist" expanded="True" />
+                    <Node name="src" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Pages" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="App" expanded="True">
+                  <Node name="Contact.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.EshopApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/sudhanshusethi/Desktop/MVC Applications/Eshop/EshopApp/EshopApp/Controllers/AppController.cs" relfile="EshopApp/Controllers/AppController.cs" line="54" column="1" />
+      <Breakpoint file="/Users/sudhanshusethi/Desktop/MVC Applications/Eshop/EshopApp/EshopApp/Controllers/AppController.cs" relfile="EshopApp/Controllers/AppController.cs" line="38" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

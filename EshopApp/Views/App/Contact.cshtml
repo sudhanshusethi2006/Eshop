@@ -1,0 +1,39 @@
+﻿@model ContactViewModel
+<h1>This is contact page</h1>
+
+
+@section Scripts
+{
+
+}
+<div id="theForm" >
+    <form method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <label asp-for="Name">your name: </label>
+        <br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+        <br />
+
+        <label asp-for="Email">email: </label>
+        <br />
+        <input type="email" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+        <br />
+
+        <label asp-for="Subject"> Subject</label>
+        <br />
+        <input type="text" asp-for="Subject" />
+        <span asp-validation-for="Subject"></span>
+
+        <br />
+        <label asp-for="Message">Message :</label>
+        <br />
+        <textarea rows="4" asp-for="Message"></textarea>
+        <span asp-validation-for="Message"></span>
+        <br />
+
+        <input type="submit" value="Send Message" />
+
+    </form>
+</div>
