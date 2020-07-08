@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "EshopConnectionString": "server=(localdb)\\mssqllocaldb;Database=EshopDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}

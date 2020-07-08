@@ -1,0 +1,11 @@
+{
+  "name": "EshopApp",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "3.5.1",
+    "bootstrap": "4.5.0",
+    "jquery-validation": "^1.17.0",
+    "jquery-validation-unobtrusive": "^3.2.10"
+
+  }
+}

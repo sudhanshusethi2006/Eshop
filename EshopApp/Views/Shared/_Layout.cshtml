@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <title>sudhanshu's Eshop</title>
     <link rel="stylesheet" href="css/site.css">
-
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
 </head>
 <body>
 
 
-<header class="container">Welcome to sudhanshu' Eshop</header>
+    <header class="container">
+      
 
-<menu>
-    @*<ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/app/contact">Contact</a></li>
-        <li><a href="/app/about">About</a></li>
-    </ul>*@
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+            <h1 class="navbar-brand">Welcome to Sudhanshu's Laptop Eshop </h1>  
+            <button class="navbar-toggler">
+                <span class="navbar-toggler-icon" data-toggle="collapse" data-target="#myMenu">
 
-    <ul>
-        <li><a asp-controller="App" asp-action="Index">Home</a></li>
-        <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
-        <li><a asp-controller="App" asp-action="About">About Us</a></li>
+                </span>
+            </button>
+       
+        <div id="myMenu" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" asp-controller="App" asp-action="Index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" asp-controller="App" asp-action="Contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" asp-controller="App" asp-action="About">About Us</a></li>
 
-    </ul>
-</menu>
-<selection class="container">
-    <h2>@ViewBag.Title</h2>
-    @RenderBody()
-</selection>
-<footer>Copyright 2020 Sudhanshu's eshop</footer>
+            </ul>
+        </div>
+        </nav>
 
-<script src="../node_modules/jquery/dist/jquery.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/Index.js"></script>
-    @RenderSection("scripts",false)
+    </header>
+    <selection class="container">
+        <h2>@ViewBag.Title</h2>
+        @RenderBody()
+    </selection>
+    <footer>
+
+        <div class="text-center">
+            Copyright 2020 Sudhanshu's eshop
+
+        </div>
+    </footer>
+
+    <script src="~/node_modules/jquery/dist/jquery.js"></script>
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/Index.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>

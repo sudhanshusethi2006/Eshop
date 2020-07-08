@@ -5,4 +5,7 @@
     <ExternalConsole>true</ExternalConsole>
     <ApplicationURL>http://localhost:10687</ApplicationURL>
   </PropertyGroup>
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+  </PropertyGroup>
 </Project>
