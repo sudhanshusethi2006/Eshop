@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sudha\\Desktop\\Eshop\\EshopApp\\EshopApp.csproj": {}
+    "/Users/sudhanshusethi/Desktop/MVC Applications/Eshop/EshopApp/EshopApp/EshopApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sudha\\Desktop\\Eshop\\EshopApp\\EshopApp.csproj": {
+    "/Users/sudhanshusethi/Desktop/MVC Applications/Eshop/EshopApp/EshopApp/EshopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sudha\\Desktop\\Eshop\\EshopApp\\EshopApp.csproj",
+        "projectUniqueName": "/Users/sudhanshusethi/Desktop/MVC Applications/Eshop/EshopApp/EshopApp/EshopApp.csproj",
         "projectName": "EshopApp",
-        "projectPath": "C:\\Users\\sudha\\Desktop\\Eshop\\EshopApp\\EshopApp.csproj",
-        "packagesPath": "C:\\Users\\sudha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sudha\\Desktop\\Eshop\\EshopApp\\obj\\",
+        "projectPath": "/Users/sudhanshusethi/Desktop/MVC Applications/Eshop/EshopApp/EshopApp/EshopApp.csproj",
+        "packagesPath": "/Users/sudhanshusethi/.nuget/packages/",
+        "outputPath": "/Users/sudhanshusethi/Desktop/MVC Applications/Eshop/EshopApp/EshopApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sudha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sudhanshusethi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
         }
       }
     }

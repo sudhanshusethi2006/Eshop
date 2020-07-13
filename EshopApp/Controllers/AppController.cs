@@ -14,6 +14,7 @@ namespace EshopApp.Controllers
         public AppController(EshopContext eshopContext)
         {
 
+            _eshopContext = eshopContext;
         }
         // GET
         public IActionResult Index()
@@ -38,11 +39,12 @@ namespace EshopApp.Controllers
             if(ModelState.IsValid)
             {
                 
-
+              
             }
             else
             {
-
+              //          _eshopContext.Posts.Add(model);
+                _eshopContext.SaveChanges();
             }
 
             return View();

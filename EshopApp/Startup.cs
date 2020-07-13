@@ -96,7 +96,7 @@ namespace EshopApp
             app.UseEndpoints(x => x.MapControllerRoute("Fallback", "{controller}/{action}/{id?}", new { Controller="App", action="Index" } ));
 
 
-
+            app.UseFileServer();
 
         }
     }

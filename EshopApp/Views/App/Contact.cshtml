@@ -1,39 +1,46 @@
 ﻿@model ContactViewModel
-<h1>This is contact page</h1>
+
+ 
 
 
-@section Scripts
-{
+    <div class="col-md-6 offset-md-3">
+        <h1>This is contact page</h1>
+        <div class="card card=body bg-light">
+            <form method="post">
 
-}
-<div id="theForm" >
-    <form method="post">
-        <div asp-validation-summary="ModelOnly"></div>
-        <label asp-for="Name">your name: </label>
-        <br />
-        <input asp-for="Name" />
-        <span asp-validation-for="Name"></span>
-        <br />
+                    
+                <div asp-validation-summary="ModelOnly"></div>
 
-        <label asp-for="Email">email: </label>
-        <br />
-        <input type="email" asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-        <br />
+                <div class="form-group">
+                    <label asp-for="Name">your name: </label>
+                    <input class="form-control" asp-for="Name" />
+                    <span asp-validation-for="Name"></span>
 
-        <label asp-for="Subject"> Subject</label>
-        <br />
-        <input type="text" asp-for="Subject" />
-        <span asp-validation-for="Subject"></span>
+                </div>
 
-        <br />
-        <label asp-for="Message">Message :</label>
-        <br />
-        <textarea rows="4" asp-for="Message"></textarea>
-        <span asp-validation-for="Message"></span>
-        <br />
 
-        <input type="submit" value="Send Message" />
+                <div class="form-group">
+                    <label asp-for="Email">email: </label>
 
-    </form>
-</div>
+                    <input class="form-control" type="email" asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Subject"> Subject</label>
+
+                    <input class="form-control" type="text" asp-for="Subject" />
+                    <span asp-validation-for="Subject"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Message">Message :</label>
+                    <br />
+                    <textarea class="form-control" rows="4" asp-for="Message"></textarea>
+                    <span asp-validation-for="Message"></span>
+                </div>
+
+                <input type="submit" value="Send Message" />
+
+            </form>
+        </div>
+    </div>

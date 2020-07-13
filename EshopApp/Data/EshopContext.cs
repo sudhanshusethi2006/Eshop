@@ -13,7 +13,7 @@ namespace EshopApp.Data
 
         public EshopContext(DbContextOptions<EshopContext> options): base(options)
         {
-
+            Database.EnsureCreated();
         }
         public DbSet<Product> Products { get; set; }
 
