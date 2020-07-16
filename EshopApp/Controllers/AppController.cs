@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using EshopApp.Data;
+using EshopApp.services;
 using EshopApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,11 +10,13 @@ namespace EshopApp.Controllers
     public class AppController : Controller
     {
     //    private readonly IMailService _mailService;
-        private readonly EshopContext _eshopContext; 
+        private readonly EshopContext _eshopContext;
+        private IMailService _mailService;
 
-        public AppController(EshopContext eshopContext)
+        public AppController(IMailService mailService, EshopContext eshopContext)
         {
 
+            _mailService = mailService;
             _eshopContext = eshopContext;
         }
         // GET
@@ -28,7 +31,8 @@ namespace EshopApp.Controllers
         public IActionResult Contact()
         {
             ViewBag.Title = "Contact Us";
-
+          //  _mailService.SendMessage("ssethi2019@gmail.com", "hello contact page", "body of my email");
+            ViewBag.UserMessage = "Email sent";
            // throw new InvalidOperationException("Bad Contact");
             return View();
         }

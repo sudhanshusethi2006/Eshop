@@ -35,6 +35,14 @@ namespace EshopApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("order");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            OrderDate = new DateTime(2020, 7, 16, 14, 32, 15, 774, DateTimeKind.Utc).AddTicks(6056),
+                            OrderNumber = "12345"
+                        });
                 });
 
             modelBuilder.Entity("EshopApp.Data.Entities.OrderItem", b =>

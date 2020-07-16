@@ -14,17 +14,42 @@ namespace EshopApp
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Run();
+            //when we use WebHost
+            //CreateHostBuilder(args).Run();
+
+            CreateHostBuilder(args).Build().Run();
+
         }
 
-        public static IWebHost CreateHostBuilder(string[] args) =>
+        //public static IWebHost CreateHostBuilder(string[] args) =>
 
 
 
-           WebHost.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration(SetuoConfiguration)
-            .UseStartup<Startup>()
-            .Build();
+        //   WebHost.CreateDefaultBuilder(args)
+        //    .ConfigureAppConfiguration(SetuoConfiguration)
+        //    .UseStartup<Startup>()
+        //    .Build();
+
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+            .ConfigureAppConfiguration((hostContext, config) =>
+            {
+                var env = hostContext.HostingEnvironment;
+
+                config.AddJsonFile("config.json", optional: true, reloadOnChange: true)
+                  .AddJsonFile($"config.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
+
+
+         //WebHost.CreateDefaultBuilder(args)
+         // .ConfigureAppConfiguration(SetuoConfiguration)
+         // .UseStartup<Startup>()
+         // .Build();
 
         private static void SetuoConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
         {

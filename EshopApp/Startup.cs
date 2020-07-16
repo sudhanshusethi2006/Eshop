@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using EshopApp.Data;
+using EshopApp.services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,14 +29,26 @@ namespace EshopApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddTransient<IMailService, NullMailService>();
+
+            services.AddDbContext<EshopContext>(cfg => cfg.UseSqlServer(Configuration.GetConnectionString("EshopConnectionString")));
             //before .net 3.0 core
             //services.AddMvc();
+
+            services.AddMvc();
             // in.net 3.0  core
-            //services.AddDbContext<EshopContext>(cfg=>cfg.UseSqlServer(Configuration.GetConnectionString("EshopConnectionString")));
-            services.AddDbContext<EshopContext>(cfg => cfg.UseSqlServer("Server=localhost,1433; Database=EshopDB;User=SA; Password=Canada@007"));
-
-
             services.AddControllersWithViews();
+
+         //   services.AddTransient<EshopContext>();
+
+            // connection string for docker on mac
+            //services.AddDbContext<EshopContext>(cfg => cfg.UseSqlServer("Server=localhost,1433; Database=EshopDB;User=SA; Password=Canada@007"));
+
+
+            
+
+       
         
    
         }
