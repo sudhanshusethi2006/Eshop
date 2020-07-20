@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5oKL50ZbfebTPqYYMIPi7n33UjZS4A0X1ocpE70Jce4OUThwHHZJrzMe6AL4NUL5OWWCl8usgOCZS3d8RNqv+w==",
+  "dgSpecHash": "TlP9/MPSeSUSKg2pk/RySXCJnG1/xC6DlFENMHali+ElWtmENONRY2+kc3CW6Evg5E9AN3NfQwJrumwZRAmAOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sudha\\Desktop\\Eshop\\EshopApp\\EshopApp.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\sudha\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\sudha\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\sudha\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\sudha\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\sudha\\.nuget\\packages\\odetocode.usenodemodules\\3.0.0\\odetocode.usenodemodules.3.0.0.nupkg.sha512",
     "C:\\Users\\sudha\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\sudha\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

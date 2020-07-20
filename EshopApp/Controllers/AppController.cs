@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
 using EshopApp.Data;
+using EshopApp.Data.Entities;
+using EshopApp.Data.Repositories;
 using EshopApp.services;
 using EshopApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -11,13 +13,16 @@ namespace EshopApp.Controllers
     {
     //    private readonly IMailService _mailService;
         private readonly EshopContext _eshopContext;
+        private readonly IOrderResposity _orderRepository;
         private IMailService _mailService;
 
-        public AppController(IMailService mailService, EshopContext eshopContext)
+        public AppController(IMailService mailService, EshopContext eshopContext , IOrderResposity orderResposity)
         {
 
             _mailService = mailService;
             _eshopContext = eshopContext;
+            _orderRepository = orderResposity;
+
         }
         // GET
         public IActionResult Index()
@@ -64,14 +69,34 @@ namespace EshopApp.Controllers
 
         public IActionResult Shop()
         {
-            var results = _eshopContext.Products
-                .OrderBy(p => p.Category)
+            var model = _orderRepository.GetAllOrders();
+            var results = _eshopContext.order
+                .OrderBy(p => p.OrderNumber)
                 .ToList();
 
             //or
 
             var results2 = from p in _eshopContext.Products orderby p.Category select p;
             return View(results);
+        }
+
+        public IActionResult CreateOrder(Order order)
+        {
+            if(ModelState.IsValid)
+            {
+                Order newOrder = _orderRepository.Add(order);
+            }
+
+            return View();
+        }
+
+        public IActionResult ViewOrder(int? id)
+        {
+            OrdersViewModel ordersViewModel = new OrdersViewModel();
+
+            Order order = _orderRepository.GetOrder(id ?? 1);
+
+            return View(order);
         }
     }
 }

@@ -149,3 +149,5 @@ C:\Users\sudha\Desktop\Eshop\EshopApp\obj\Debug\netcoreapp3.1\EshopApp.dll
 C:\Users\sudha\Desktop\Eshop\EshopApp\obj\Debug\netcoreapp3.1\EshopApp.pdb
 C:\Users\sudha\Desktop\Eshop\EshopApp\obj\Debug\netcoreapp3.1\EshopApp.genruntimeconfig.cache
 C:\Users\sudha\Desktop\Eshop\EshopApp\obj\Debug\netcoreapp3.1\EshopApp.csprojAssemblyReference.cache
+C:\Users\sudha\Desktop\Eshop\EshopApp\bin\Debug\netcoreapp3.1\Data\art.json
+C:\Users\sudha\Desktop\Eshop\EshopApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using EshopApp.Data;
+using EshopApp.Data.Repositories;
 using EshopApp.services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,17 +41,20 @@ namespace EshopApp
             // in.net 3.0  core
             services.AddControllersWithViews();
 
-         //   services.AddTransient<EshopContext>();
+            //   services.AddTransient<EshopContext>();
 
             // connection string for docker on mac
             //services.AddDbContext<EshopContext>(cfg => cfg.UseSqlServer("Server=localhost,1433; Database=EshopDB;User=SA; Password=Canada@007"));
 
 
-            
 
-       
-        
-   
+
+            services.AddScoped<IOrderResposity, SQLOrderRepository>();
+            //or
+            // we cn use the order repo instead of sql repo 
+            //services.AddScoped<IOrderResposity, MockOrderRepository>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

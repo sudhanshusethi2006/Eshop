@@ -4,14 +4,16 @@ using EshopApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EshopApp.Migrations
 {
     [DbContext(typeof(EshopContext))]
-    partial class EshopContextModelSnapshot : ModelSnapshot
+    [Migration("20200719022937_AddingPricecolumnToOrdersTable")]
+    partial class AddingPricecolumnToOrdersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,9 +37,6 @@ namespace EshopApp.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<bool>("isComplete")
-                        .HasColumnType("bit");
-
                     b.HasKey("Id");
 
                     b.ToTable("order");
@@ -46,26 +45,9 @@ namespace EshopApp.Migrations
                         new
                         {
                             Id = 1,
-                            OrderDate = new DateTime(2020, 7, 20, 3, 5, 35, 990, DateTimeKind.Utc).AddTicks(7865),
+                            OrderDate = new DateTime(2020, 7, 19, 2, 29, 36, 747, DateTimeKind.Utc).AddTicks(6190),
                             OrderNumber = "12345",
-                            Price = 99.23m,
-                            isComplete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            OrderDate = new DateTime(2020, 7, 20, 3, 5, 35, 990, DateTimeKind.Utc).AddTicks(9527),
-                            OrderNumber = "12346",
-                            Price = 120.98m,
-                            isComplete = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            OrderDate = new DateTime(2020, 7, 20, 3, 5, 35, 990, DateTimeKind.Utc).AddTicks(9557),
-                            OrderNumber = "12347",
-                            Price = 150.00m,
-                            isComplete = false
+                            Price = 0m
                         });
                 });
 
@@ -135,8 +117,7 @@ namespace EshopApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Product>
+﻿@model IEnumerable<Order>
 <h1>welcome to the shop's page</h1>
 <h1>Shop</h1>
 <p>Count : @Model.Count()</p>
 @foreach(var p in Model)
 {
-    <li>@p.Title</li>
+    <li>@p.OrderNumber</li>
 }
 
 

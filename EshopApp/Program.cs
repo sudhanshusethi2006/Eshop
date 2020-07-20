@@ -16,10 +16,18 @@ namespace EshopApp
         {
             //when we use WebHost
             //CreateHostBuilder(args).Run();
-
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args);
+         //   RunSeeding(host);
+            //CreateHostBuilder(args).
+                
+                host.Build().Run();
 
         }
+
+        //private static void RunSeeding(IHostBuilder host)
+        //{
+        //    var seeder= host.ConfigureServices.
+        //}
 
         //public static IWebHost CreateHostBuilder(string[] args) =>
 

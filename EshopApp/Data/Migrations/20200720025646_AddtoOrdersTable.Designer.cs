@@ -4,14 +4,16 @@ using EshopApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EshopApp.Migrations
 {
     [DbContext(typeof(EshopContext))]
-    partial class EshopContextModelSnapshot : ModelSnapshot
+    [Migration("20200720025646_AddtoOrdersTable")]
+    partial class AddtoOrdersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,25 +48,9 @@ namespace EshopApp.Migrations
                         new
                         {
                             Id = 1,
-                            OrderDate = new DateTime(2020, 7, 20, 3, 5, 35, 990, DateTimeKind.Utc).AddTicks(7865),
+                            OrderDate = new DateTime(2020, 7, 20, 2, 56, 45, 910, DateTimeKind.Utc).AddTicks(7568),
                             OrderNumber = "12345",
-                            Price = 99.23m,
-                            isComplete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            OrderDate = new DateTime(2020, 7, 20, 3, 5, 35, 990, DateTimeKind.Utc).AddTicks(9527),
-                            OrderNumber = "12346",
-                            Price = 120.98m,
-                            isComplete = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            OrderDate = new DateTime(2020, 7, 20, 3, 5, 35, 990, DateTimeKind.Utc).AddTicks(9557),
-                            OrderNumber = "12347",
-                            Price = 150.00m,
+                            Price = 0m,
                             isComplete = false
                         });
                 });

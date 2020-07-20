@@ -10,7 +10,7 @@ namespace EshopApp.Data
         public EshopContext(DbContextOptions<EshopContext> options) : base(options)
         {
             // important 
-            //Database.EnsureCreated();
+            Database.EnsureCreated();
         }
         public DbSet<Product> Products { get; set; }
 
@@ -35,16 +35,8 @@ namespace EshopApp.Data
 
             // this how you can create an order
 
-            modelBuilder.Entity<Order>()
-.HasData(new Order()
-{
-    Id=1,
-    OrderDate=DateTime.UtcNow,
-    OrderNumber="12345"
 
-});
-
-
+            modelBuilder.seed();
 
         }
     }
